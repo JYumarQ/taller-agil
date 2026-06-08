@@ -1,11 +1,24 @@
-# Sistema de Reputación Turística
+# Sistema de Reputación Turística (Clasificador de Sentimientos)
 
-Este proyecto clasifica reseñas de hoteles y genera estadísticas, aplicando metodologías ágiles (Scrum, Kanban, XP).
+## Descripción
+Este proyecto es un script en Python diseñado para procesar reseñas de clientes extraídas de un archivo `.txt`, limpiarlas y clasificarlas mediante un análisis de polaridad simple basado en palabras clave (Positiva, Negativa, Neutral). Además, incluye un sistema de pruebas unitarias automatizadas utilizando `unittest`.
 
-## Instrucciones de ejecución
-1. Asegúrate de tener Python instalado en tu sistema.
-2. Abre la terminal en la carpeta del proyecto.
-3. Ejecuta el comando: `python clasificador_simple.py`
-4. El script ejecutará automáticamente las pruebas unitarias (TDD) y luego procesará las reseñas para generar el reporte de estadísticas.
+## Estructura de Archivos
+* `clasificador_simple.py`: Script principal que contiene la lógica de limpieza, clasificación, ejecución de pruebas unitarias (TDD) y generación de reportes.
+* `resenas.txt`: Archivo de texto que actúa como base de datos, conteniendo 20 reseñas de ejemplo.
 
-*Nota: Todo el código de este repositorio fue desarrollado simulando Pair Programming y ha pasado por el Pair Review estipulado en nuestra Definition of Done (DoD).*
+## Requisitos
+* Entorno de ejecución Linux o compatible (o terminal estándar en cualquier OS).
+* Python 3.x instalado. No requiere librerías externas ni dependencias adicionales, solo la biblioteca estándar de Python.
+
+## Instrucciones de Ejecución
+
+### 1. Preparación
+Asegúrese de que el archivo `resenas.txt` se encuentre exactamente en el mismo directorio que el script `clasificador_simple.py`.
+
+### 2. Ejecutar Pruebas Unitarias y Reporte
+El diseño del sistema permite correr el script de forma directa. Primero ejecutará la batería de pruebas y luego procesará el archivo de texto.
+
+Ejecute el siguiente comando en la terminal:
+```bash
+python3 clasificador_simple.py
