@@ -9,9 +9,11 @@ def limpiar_texto(texto):
 
 # Función a desarrollar (HU03 y HU06)
 def clasificar_sentimiento(texto):
-    positivas = ["excelente", "maravilloso", "bueno", "limpio"]
-    negativas = ["malo", "sucio", "roto", "horrible"]
-    texto_limpio = texto.lower()
+    # Ampliamos la base de palabras clave para capturar variaciones de género y evitar falsos neutrales
+    positivas = ["excelente", "maravilloso", "maravillosa", "bueno", "buena", "genial", "limpio", "limpia"]
+    negativas = ["malo", "mala", "sucio", "sucia", "roto", "rota", "horrible", "pésima"]
+    
+    texto_limpio = limpiar_texto(texto)
     
     if any(p in texto_limpio for p in positivas):
         return "Positiva"
@@ -49,14 +51,21 @@ if __name__ == '__main__':
     
     positivas = 0
     negativas = 0
+    neutrales = 0
     
     for r in reseñas:
-        resultado = clasificar_sentimiento(limpiar_texto(r))
+        resultado = clasificar_sentimiento(r)
         print(f"- {r[:40]}... -> {resultado}")
+        
         if resultado == "Positiva":
             positivas += 1
         elif resultado == "Negativa":
             negativas += 1
+        elif resultado == "Neutral":
+            neutrales += 1
             
+    
     print(f"\nTotal Positivas: {positivas}")
     print(f"Total Negativas: {negativas}")
+    print(f"Total Neutrales: {neutrales}")
+    print(f"Total de Reseñas Procesadas: {positivas + negativas + neutrales}")
