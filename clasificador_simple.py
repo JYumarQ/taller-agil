@@ -2,7 +2,10 @@ import unittest
 
 # Función a desarrollar (HU02)
 def limpiar_texto(texto):
-    return texto
+    texto_limpio = texto.lower()
+    for signo in ["!", "¡", "?", "¿", ",", ".", ";", ":"]:
+        texto_limpio = texto_limpio.replace(signo, "")
+    return texto_limpio.strip()
 
 # Función a desarrollar (HU03 y HU06)
 def clasificar_sentimiento(texto):
