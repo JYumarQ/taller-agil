@@ -1,24 +1,25 @@
-# Sistema de Reputación Turística (Clasificador de Sentimientos)
+# Sistema de Reputación Turística
 
-## Descripción
-Este proyecto es un script en Python diseñado para procesar reseñas de clientes extraídas de un archivo `.txt`, limpiarlas y clasificarlas mediante un análisis de polaridad simple basado en palabras clave (Positiva, Negativa, Neutral). Además, incluye un sistema de pruebas unitarias automatizadas utilizando `unittest`.
+Proyecto integrador desarrollado para procesar y clasificar reseñas hoteleras, evaluado bajo los marcos de Scrum, Kanban y Extreme Programming (XP).
 
-## Estructura de Archivos
-* `clasificador_simple.py`: Script principal que contiene la lógica de limpieza, clasificación, ejecución de pruebas unitarias (TDD) y generación de reportes.
-* `resenas.txt`: Archivo de texto que actúa como base de datos, conteniendo 20 reseñas de ejemplo.
+## Equipo y Roles de Scrum
+*   **Product Owner:** Elier (Priorización de Backlog)
+*   **Scrum Master:** Juan Yumar (Gestión de Impedimentos)
+*   **Developer:** Yaimir (Ejecución Técnica)
 
-## Requisitos
-* Entorno de ejecución Linux o compatible (o terminal estándar en cualquier OS).
-* Python 3.x instalado. No requiere librerías externas ni dependencias adicionales, solo la biblioteca estándar de Python.
+## Marcos de Trabajo Aplicados
+*   **Scrum:** Gestión del Sprint Backlog y cumplimiento de ceremonias.
+*   **Kanban:** Gestión visual del flujo de trabajo en Taiga con límites estrictos de WIP=2 en las columnas de desarrollo activo[cite: 6].
+*   **XP (Extreme Programming):** Desarrollo guiado por pruebas (TDD) con cobertura de pruebas unitarias antes del código y sesiones de Pair Programming[cite: 6].
+
+## Requisitos del Sistema
+*   Python 3.x instalado[cite: 6].
+*   El archivo de origen `resenas.txt` debe estar en la misma carpeta que el script[cite: 6].
 
 ## Instrucciones de Ejecución
 
-### 1. Preparación
-Asegúrese de que el archivo `resenas.txt` se encuentre exactamente en el mismo directorio que el script `clasificador_simple.py`.
+### Ejecutar Clasificador y Pruebas Unitarias
+El script ejecutará automáticamente la suite de pruebas unitarias (`unittest`) antes de procesar el archivo masivo de reseñas[cite: 6]. Ejecute el comando:
 
-### 2. Ejecutar Pruebas Unitarias y Reporte
-El diseño del sistema permite correr el script de forma directa. Primero ejecutará la batería de pruebas y luego procesará el archivo de texto.
-
-Ejecute el siguiente comando en la terminal:
 ```bash
 python3 clasificador_simple.py
